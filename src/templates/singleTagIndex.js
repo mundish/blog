@@ -17,6 +17,7 @@ const SingleTagTemplate = ({ pageContext }) => {
           })}
         </ul>
       </div>
+      <Link to='/'>Back to start</Link>
     </div>
   )
 }

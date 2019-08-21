@@ -14,6 +14,7 @@ const Template = ({ data: { markdownRemark }, pageContext }) => {
       <div className={"blogpost"} dangerouslySetInnerHTML={{ __html: html }} />
       {next && <Link to={next.frontmatter.path}>Next</Link>}
       {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
+      <Link to='/'>Back to start</Link>
     </div>
   )
 }
