@@ -4,19 +4,13 @@ const createTagPages = (createPage, posts) => {
   const allTagsIndexTemplate = path.resolve("src/templates/allTagsIndex.js")
   const singleTagIndexTemplate = path.resolve("src/templates/singleTagIndex.js")
 
-  // TODO: refactor with reduce
-  const postsByTag = {}
-
-  posts.forEach(({ node }) => {
-    if (node.frontmatter.tags) {
-      node.frontmatter.tags.forEach(tag => {
-        if (!postsByTag[tag]) {
-          postsByTag[tag] = []
-        }
-        postsByTag[tag].push(node)
-      })
-    }
-  })
+  const postsByTag = posts.reduce((acc, post) => {
+    const { tags } = post.node.frontmatter
+    tags.forEach(tag => {
+      acc[tag] = acc[tag] ? [...acc[tag], post.node] : [post.node]
+    })
+    return acc
+  }, {})
 
   const tags = Object.keys(postsByTag)
 
