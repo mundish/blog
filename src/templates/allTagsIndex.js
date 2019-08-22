@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const AllTagsTemplate = ({ pageContext }) => {
   const { tags } = pageContext
   return (
-    <div>
+    <Layout>
       <div>
         <ul>
           {tags.map((tag, idx) => {
@@ -16,8 +17,8 @@ const AllTagsTemplate = ({ pageContext }) => {
           })}
         </ul>
       </div>
-      <Link to='/'>Back to start</Link>
-    </div>
+      <Link to="/">Back to start</Link>
+    </Layout>
   )
 }
 
