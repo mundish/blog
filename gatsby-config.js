@@ -6,17 +6,18 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'My blog',
-    description: 'Another day another blog'
+    title: "My blog",
+    description: "Another day another blog",
   },
   plugins: [
-    'gatsby-transformer-remark',
+    "gatsby-plugin-postcss",
+    "gatsby-transformer-remark",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`
-      }
-    }
-  ]
+        name: "pages",
+        path: `${__dirname}/src/pages`,
+      },
+    },
+  ],
 }
