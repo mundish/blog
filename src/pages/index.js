@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
-import Preview from "../components/Preview";
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/layout';
+import Preview from '../components/Preview';
 
 export default ({ data }) => {
   const { edges } = data.allMarkdownRemark;

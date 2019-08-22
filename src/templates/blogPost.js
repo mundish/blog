@@ -1,21 +1,21 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/layout';
 
 const Template = ({ data: { markdownRemark }, pageContext }) => {
   const {
     html,
-    frontmatter: { title, date }
+    frontmatter: { title, date },
   } = markdownRemark;
   const { prev, next } = pageContext;
 
   return (
     <Layout>
-      <header className={"mb-4"}>
-        <h1 className={"text-2xl"}>{title}</h1>
+      <header className={'mb-4'}>
+        <h1 className={'text-2xl'}>{title}</h1>
         <span>{date}</span>
       </header>
-      <div className={"mb-8"} dangerouslySetInnerHTML={{ __html: html }} />
+      <div className={'mb-8'} dangerouslySetInnerHTML={{ __html: html }} />
       <nav>
         <div>
           {prev && <Link to={prev.frontmatter.path}>Previous</Link>}

@@ -1,9 +1,9 @@
-const path = require("path");
+const path = require('path');
 
 const createTagPages = (createPage, posts) => {
-  const allTagsIndexTemplate = path.resolve("src/templates/allTagsIndex.js");
+  const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.js');
   const singleTagIndexTemplate = path.resolve(
-    "src/templates/singleTagIndex.js"
+    'src/templates/singleTagIndex.js'
   );
 
   const postsByTag = posts.reduce((acc, post) => {
@@ -17,11 +17,11 @@ const createTagPages = (createPage, posts) => {
   const tags = Object.keys(postsByTag);
 
   createPage({
-    path: "/tags",
+    path: '/tags',
     component: allTagsIndexTemplate,
     context: {
-      tags: tags.sort()
-    }
+      tags: tags.sort(),
+    },
   });
 
   tags.forEach(tag => {
@@ -32,8 +32,8 @@ const createTagPages = (createPage, posts) => {
       component: singleTagIndexTemplate,
       context: {
         posts,
-        tag
-      }
+        tag,
+      },
     });
   });
 };
@@ -42,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve("src/templates/blogPost.js");
+    const blogPostTemplate = path.resolve('src/templates/blogPost.js');
 
     resolve(
       graphql(
@@ -76,8 +76,8 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               pathSlug: path,
               prev: idx === 0 ? null : posts[idx - 1].node,
-              next: idx === posts.length - 1 ? null : posts[idx + 1].node
-            }
+              next: idx === posts.length - 1 ? null : posts[idx + 1].node,
+            },
           });
           resolve();
         });
