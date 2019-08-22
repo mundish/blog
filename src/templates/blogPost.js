@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
 
 const Template = ({ data: { markdownRemark }, pageContext }) => {
   const {
     html,
-    frontmatter: { title },
-  } = markdownRemark
-  const { prev, next } = pageContext
+    frontmatter: { title }
+  } = markdownRemark;
+  const { prev, next } = pageContext;
 
   return (
     <Layout>
@@ -17,8 +17,8 @@ const Template = ({ data: { markdownRemark }, pageContext }) => {
       {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
       <Link to="/">Back to start</Link>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($pathSlug: String!) {
@@ -29,6 +29,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Template
+export default Template;
