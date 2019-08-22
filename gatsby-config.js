@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: "My blog",
-    description: "Another day another blog",
+    description: "Another day another blog"
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -16,8 +16,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: `${__dirname}/src/pages`,
-      },
-    },
-  ],
-}
+        path: `${__dirname}/src/pages`
+      }
+    }
+  ]
+};
