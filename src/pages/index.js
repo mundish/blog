@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
+import Preview from "../components/Preview";
 
 export default ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -9,10 +10,15 @@ export default ({ data }) => {
     <Layout>
       {edges.map(edge => {
         const { frontmatter } = edge.node;
+        const { title, date, excerpt, path } = frontmatter;
         return (
-          <div key={frontmatter.path}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </div>
+          <Preview
+            key={frontmatter.path}
+            title={title}
+            date={date}
+            excerpt={excerpt}
+            path={path}
+          />
         );
       })}
       <div>
@@ -31,6 +37,7 @@ export const query = graphql`
             title
             path
             date
+            excerpt
           }
         }
       }
