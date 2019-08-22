@@ -18,8 +18,8 @@ const Template = ({ data: { markdownRemark }, pageContext }) => {
       <div className={"mb-8"} dangerouslySetInnerHTML={{ __html: html }} />
       <nav>
         <div>
-          {next && <Link to={next.frontmatter.path}>Next</Link>}
           {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
+          {next && <Link to={next.frontmatter.path}>Next</Link>}
         </div>
         <Link to="/">Back to start</Link>
       </nav>
