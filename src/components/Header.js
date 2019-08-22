@@ -1,11 +1,13 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 
 const TitleAndDesc = ({ data }) => {
   const { title, description } = data.site.siteMetadata;
   return (
     <div className="mb-8">
-      <h2 className="text-3xl text-center">{title}</h2>
+      <Link to={"/"}>
+        <h2 className="text-3xl text-center">{title}</h2>
+      </Link>
       <p className="text-center">{description}</p>
     </div>
   );

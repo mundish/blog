@@ -6,8 +6,8 @@ const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tag } = pageContext;
   return (
     <Layout>
-      <div>Posts tagged with {tag}</div>
-      <div>
+      <div className={"text-center mb-4"}>
+        <h1 className={"text-2xl mb-4"}>Posts tagged with {tag}</h1>
         <ul>
           {posts.map((post, idx) => {
             return (
