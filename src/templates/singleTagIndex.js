@@ -11,7 +11,6 @@ const SingleTagTemplate = ({ pageContext }) => {
         <h1 className={'text-center text-2xl mb-4'}>Posts tagged with {tag}</h1>
         <ul>
           {posts.map((post, idx) => {
-            console.log(post);
             const { title, date, excerpt, path } = post.frontmatter;
 
             return (
