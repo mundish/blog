@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import Preview from '../components/Preview';
 
 export default ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
 
   return (
     <Layout>
@@ -30,7 +30,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
