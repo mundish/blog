@@ -6,7 +6,7 @@ const TitleAndDesc = ({ data }) => {
   return (
     <div className="mb-8">
       <Link to={'/'}>
-        <h2 className="text-3xl text-center">{title}</h2>
+        <h2 className="text-3xl text-center font-bold">{title}</h2>
       </Link>
       <p className="text-center">{description}</p>
     </div>

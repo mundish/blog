@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import StartLink from '../components/StartLink';
 
 const AllTagsTemplate = ({ pageContext }) => {
   const { tags } = pageContext;
@@ -8,7 +9,7 @@ const AllTagsTemplate = ({ pageContext }) => {
     <Layout>
       <div className={'text-center mb-4'}>
         <h1 className={'text-2xl mb-4'}>Tags</h1>
-        <ul>
+        <ul className={'font-serif'}>
           {tags.map((tag, idx) => {
             return (
               <li key={idx} className={'py-1'}>
@@ -18,7 +19,7 @@ const AllTagsTemplate = ({ pageContext }) => {
           })}
         </ul>
       </div>
-      <Link to="/">Back to start</Link>
+      <StartLink />
     </Layout>
   );
 };

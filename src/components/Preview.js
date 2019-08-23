@@ -6,10 +6,10 @@ const Preview = ({ title, date, excerpt, path }) => {
     <Link to={path}>
       <section className={'p-5 mb-5'}>
         <header>
-          <h3 className={'text-xl'}>{title}</h3>
-          <span className={'text-sm'}>{date}</span>
+          <h3 className={'text-xl font-bold'}>{title}</h3>
+          <span className={'font-serif text-sm'}>{date}</span>
         </header>
-        <p className={'pl-2'}>{excerpt}</p>
+        <p className={'font-serif'}>{excerpt}</p>
       </section>
     </Link>
   );
