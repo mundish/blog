@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const Template = ({ data: { markdownRemark }, pageContext }) => {
+const Template = ({ data: { mdx }, pageContext }) => {
   const {
-    html,
+    body,
     frontmatter: { title, date },
-  } = markdownRemark;
+  } = mdx;
   const { prev, next } = pageContext;
 
   return (
@@ -15,7 +16,9 @@ const Template = ({ data: { markdownRemark }, pageContext }) => {
         <h1 className={'text-2xl'}>{title}</h1>
         <span>{date}</span>
       </header>
-      <div className={'mb-8'} dangerouslySetInnerHTML={{ __html: html }} />
+      <div className={'mb-8'}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </div>
       <nav>
         <div>
           {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
@@ -29,8 +32,8 @@ const Template = ({ data: { markdownRemark }, pageContext }) => {
 
 export const query = graphql`
   query($pathSlug: String!) {
-    markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
-      html
+    mdx(frontmatter: { path: { eq: $pathSlug } }) {
+      body
       frontmatter {
         title
         date
