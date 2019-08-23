@@ -23,9 +23,15 @@ const Template = ({ data: { mdx }, pageContext }) => {
       <nav>
         <div className={'flex justify-between'}>
           <div>
-            {prev && <Link to={prev.frontmatter.path}>« Previous</Link>}
+            {prev && (
+              <Link to={prev.frontmatter.path}>« {prev.frontmatter.title}</Link>
+            )}
           </div>
-          <div>{next && <Link to={next.frontmatter.path}>Next »</Link>}</div>
+          <div>
+            {next && (
+              <Link to={next.frontmatter.path}>{next.frontmatter.title} »</Link>
+            )}
+          </div>
         </div>
         <StartLink />
       </nav>
