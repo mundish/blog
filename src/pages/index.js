@@ -21,8 +21,10 @@ export default ({ data }) => {
           />
         );
       })}
-      <div className={'pl-5'}>
-        <Link to="/tags">Browse tags</Link>
+      <div className={'text-center mt-4'}>
+        <Link className={'underline hover:no-underline'} to="/tags">
+          Browse tags
+        </Link>
       </div>
     </Layout>
   );

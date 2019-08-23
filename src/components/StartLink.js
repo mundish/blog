@@ -4,7 +4,9 @@ import { Link } from 'gatsby';
 const StartLink = () => {
   return (
     <div className={'text-center border-t'}>
-      <Link to="/">Back to start</Link>
+      <Link className={'underline hover:no-underline'} to="/">
+        Back to start
+      </Link>
     </div>
   );
 };
