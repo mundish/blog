@@ -21,10 +21,11 @@ const Template = ({ data: { mdx }, pageContext }) => {
         <MDXRenderer>{body}</MDXRenderer>
       </div>
       <nav>
-        <div>
-          {prev && <Link to={prev.frontmatter.path}>« Previous</Link>}
-          {prev && next && ' ~ '}
-          {next && <Link to={next.frontmatter.path}>Next »</Link>}
+        <div className={'flex justify-between'}>
+          <div>
+            {prev && <Link to={prev.frontmatter.path}>« Previous</Link>}
+          </div>
+          <div>{next && <Link to={next.frontmatter.path}>Next »</Link>}</div>
         </div>
         <StartLink />
       </nav>
