@@ -13,7 +13,7 @@ export default ({ data }) => {
         const { title, date, excerpt, path } = frontmatter;
         return (
           <Preview
-            key={frontmatter.path}
+            key={path}
             title={title}
             date={date}
             excerpt={excerpt}
@@ -21,7 +21,7 @@ export default ({ data }) => {
           />
         );
       })}
-      <div>
+      <div className={'pl-5'}>
         <Link to="/tags">Browse tags</Link>
       </div>
     </Layout>

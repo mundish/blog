@@ -1,20 +1,27 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import StartLink from '../components/StartLink';
+import Preview from '../components/Preview';
 
 const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tag } = pageContext;
   return (
     <Layout>
-      <div className={'text-center mb-4'}>
-        <h1 className={'text-2xl mb-4'}>Posts tagged with {tag}</h1>
+      <div className={'mb-4'}>
+        <h1 className={'text-center text-2xl mb-4'}>Posts tagged with {tag}</h1>
         <ul>
           {posts.map((post, idx) => {
+            console.log(post);
+            const { title, date, excerpt, path } = post.frontmatter;
+
             return (
-              <li key={idx}>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </li>
+              <Preview
+                key={idx}
+                title={title}
+                date={date}
+                excerpt={excerpt}
+                path={path}
+              />
             );
           })}
         </ul>
