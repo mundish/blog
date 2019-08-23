@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/layout';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Layout from '../components/layout';
+import StartLink from '../components/StartLink';
 
 const Template = ({ data: { mdx }, pageContext }) => {
   const {
@@ -13,18 +14,19 @@ const Template = ({ data: { mdx }, pageContext }) => {
   return (
     <Layout>
       <header className={'mb-4'}>
-        <h1 className={'text-2xl'}>{title}</h1>
-        <span>{date}</span>
+        <h1 className={'text-3xl'}>{title}</h1>
+        <span className={'font-serif text-sm'}>{date}</span>
       </header>
-      <div className={'mb-8'}>
+      <div className={'mb-8 font-serif'}>
         <MDXRenderer>{body}</MDXRenderer>
       </div>
       <nav>
         <div>
-          {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
-          {next && <Link to={next.frontmatter.path}>Next</Link>}
+          {prev && <Link to={prev.frontmatter.path}>« Previous</Link>}
+          {prev && next && ' ~ '}
+          {next && <Link to={next.frontmatter.path}>Next »</Link>}
         </div>
-        <Link to="/">Back to start</Link>
+        <StartLink />
       </nav>
     </Layout>
   );

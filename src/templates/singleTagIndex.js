@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import StartLink from '../components/StartLink';
 
 const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tag } = pageContext;
@@ -18,7 +19,7 @@ const SingleTagTemplate = ({ pageContext }) => {
           })}
         </ul>
       </div>
-      <Link to="/">Back to start</Link>
+      <StartLink />
     </Layout>
   );
 };
