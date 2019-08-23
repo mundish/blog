@@ -6,12 +6,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'My blog',
-    description: 'Another day another blog',
+    title: '>mundi.sh',
+    description: 'musings',
   },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-mdx',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
