@@ -13,7 +13,12 @@ const AllTagsTemplate = ({ pageContext }) => {
           {tags.map((tag, idx) => {
             return (
               <li key={idx} className={'py-1'}>
-                <Link to={`/tags/${tag}`}>{tag}</Link>
+                <Link
+                  className={'underline hover:no-underline'}
+                  to={`/tags/${tag}`}
+                >
+                  {tag}
+                </Link>
               </li>
             );
           })}

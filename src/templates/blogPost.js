@@ -17,7 +17,7 @@ const Template = ({ data: { mdx }, pageContext }) => {
         <h1 className={'text-3xl'}>{title}</h1>
         <span className={'font-serif text-sm'}>{date}</span>
       </header>
-      <div className={'mb-8 font-serif'}>
+      <div className={'mb-4 font-serif'}>
         <MDXRenderer>{body}</MDXRenderer>
       </div>
       <nav>
