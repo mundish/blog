@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 const Preview = ({ title, date, excerpt, path }) => {
@@ -13,6 +14,13 @@ const Preview = ({ title, date, excerpt, path }) => {
       </section>
     </Link>
   );
+};
+
+Preview.propTypes = {
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default Preview;
