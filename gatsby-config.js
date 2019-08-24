@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '>mundi.sh',
+    title: 'mundi.sh_',
     description: 'musings',
   },
   plugins: [
