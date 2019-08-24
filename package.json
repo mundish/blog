@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "publish": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.3.1",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@weahead/prettier-config": "0.1.3",
+    "gh-pages": "^2.1.1",
     "prettier": "1.18.2",
     "tailwindcss": "^1.1.2"
   },
