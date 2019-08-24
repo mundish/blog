@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
 import StartLink from '../components/StartLink';
@@ -18,7 +19,16 @@ const Template = ({ data: { mdx }, pageContext }) => {
         <span className={'font-serif text-sm'}>{date}</span>
       </header>
       <div className={'mb-4 font-serif'}>
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXProvider
+          components={{
+            a: props => (
+              // eslint-disable-next-line
+              <a className={'underline hover:no-underline'} {...props} />
+            ),
+          }}
+        >
+          <MDXRenderer>{body}</MDXRenderer>
+        </MDXProvider>
       </div>
       <nav>
         <div className={'flex justify-between'}>
