@@ -6,10 +6,18 @@ import Preview from '../components/Preview';
 
 const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tag } = pageContext;
+  const headingText =
+    tag === 'untagged' ? (
+      'Untagged posts'
+    ) : (
+      <>
+        Posts tagged with <em>{tag}</em>
+      </>
+    );
   return (
     <Layout>
       <div className={'mb-4'}>
-        <h1 className={'text-center text-2xl mb-4'}>Posts tagged with {tag}</h1>
+        <h1 className={'text-center text-2xl mb-4'}>{headingText}</h1>
         <ul>
           {posts.map((post, idx) => {
             const { title, date, excerpt, path } = post.frontmatter;

@@ -8,8 +8,15 @@ const createTagPages = (createPage, posts) => {
 
   const postsByTag = posts.reduce((acc, post) => {
     const { tags } = post.node.frontmatter;
+
     tags.forEach(tag => {
-      acc[tag] = acc[tag] ? [...acc[tag], post.node] : [post.node];
+      if (tag) {
+        acc[tag] = acc[tag] ? [...acc[tag], post.node] : [post.node];
+      } else {
+        acc.untagged = acc.untagged
+          ? [...acc.untagged, post.node]
+          : [post.node];
+      }
     });
     return acc;
   }, {});
