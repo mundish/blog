@@ -5,6 +5,7 @@ import StartLink from '../components/StartLink';
 
 const AllTagsTemplate = ({ pageContext }) => {
   const { tags } = pageContext;
+
   return (
     <Layout>
       <div className={'text-center mb-4'}>
