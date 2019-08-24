@@ -54,6 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
                   frontmatter {
                     path
                     title
+                    date
                     tags
                     excerpt
                   }
