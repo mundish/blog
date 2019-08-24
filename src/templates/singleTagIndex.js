@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import StartLink from '../components/StartLink';
 import Preview from '../components/Preview';
@@ -24,6 +25,11 @@ const SingleTagTemplate = ({ pageContext }) => {
             );
           })}
         </ul>
+      </div>
+      <div className={'text-center p-4'}>
+        <Link className={'underline hover:no-underline'} to={'/tags'}>
+          Browse all tags
+        </Link>
       </div>
       <StartLink />
     </Layout>
