@@ -92,3 +92,26 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions;
+  const typeDefs = [
+    'type Mdx implements Node { frontmatter: Frontmatter }',
+    schema.buildObjectType({
+      name: 'Frontmatter',
+      fields: {
+        tags: {
+          type: '[String!]',
+          resolve(source) {
+            const { tags } = source;
+            if (source.tags == null || (Array.isArray(tags) && !tags.length)) {
+              return ['uncategorized'];
+            }
+            return tags;
+          },
+        },
+      },
+    }),
+  ];
+  createTypes(typeDefs);
+};

@@ -7,8 +7,8 @@ import Preview from '../components/Preview';
 const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tag } = pageContext;
   const headingText =
-    tag === 'untagged' ? (
-      'Untagged posts'
+    tag === 'uncategorized' ? (
+      'Uncategorized posts'
     ) : (
       <>
         Posts tagged with <em>{tag}</em>
