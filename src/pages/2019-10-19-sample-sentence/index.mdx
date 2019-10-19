@@ -1,0 +1,69 @@
+---
+path: '/sample-sentence'
+date: '2019-10-19'
+title: 'Sample sentence'
+tags: ['japanese']
+excerpt: "You're only mad because they stole the izakaya's tame monkey"
+---
+
+import Furigana from '../../components/Furigana';
+
+The idea here is to figure out the translation of a random sentence I've come up with:
+_You're only angry because they stole the izakaya's tame monkey._
+
+<br/>
+My initial effort to collect the pieces needed yielded this:
+<br/>
+<Furigana characters={[{kanji:'怒',kana:'おこ'}]}　/>る - To get angry/mad
+<br/>
+<Furigana characters={[{kanji:'居',kana:'い'},{kanji:'酒',kana:'ざか'},{kanji:'屋',kana:'や'}]} /> - Izakaya
+<br/>
+<Furigana characters={[{kanji:'盗',kana:'ぬす'}]} />む - To steal
+<br/>
+<Furigana characters={[{kanji:'温', kana:'おん'},{kanji:'順', kana:'じゅん'}]}/>(な) - Tame (adj.)
+<br/>
+Aのために... - Because of A ...
+
+<br/>
+<br/>
+Which would result in something like:
+<br/>
+
+<div className={'text-lg text-center'}>
+    <Furigana characters={[{kanji:'居', kana:'い'},{kanji:'酒',kana:'ざか'},{kanji:'屋',kana:'や'}]} />
+    の
+    <Furigana characters={[{kanji:'温', kana: 'おん'},{kanji:'順',kana:'じゅん'}]} />
+    なサルを
+    <Furigana characters={[{kanji:'盗', kana:'ぬす'}]} />
+    んだのために
+    <Furigana characters={[{kanji:'怒',kana:'おこ'}]}/>
+    ました。
+</div>
+<br/>
+
+_However_, reaching out to a friend (native speaker), I got a few pointers:
+
+- Tame has a lot of meanings, but in this case,”飼いならす” or “おとなしい” sounds better.
+
+<br />
+
+### Result
+
+<div className={'text-lg text-center'}>
+  <Furigana
+    characters={[
+      { kanji: '居', kana: 'い' },
+      { kanji: '酒', kana: 'ざか' },
+      { kanji: '屋', kana: 'や' },
+    ]}
+  />
+  のおとなしいサルを
+  <Furigana characters={[{ kanji: '盗', kana: 'ぬす' }]} />
+  んだため、
+  <Furigana characters={[{ kanji: '怒', kana: 'おこ' }]} />
+  られました。
+</div>
+
+// のために // with or without particles??
+
+### Take aways:
