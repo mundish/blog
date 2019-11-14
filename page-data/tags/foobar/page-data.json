@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-single-tag-index-js","path":"/tags/foobar","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":false,"posts":[{"frontmatter":{"path":"/hello","title":"Hello","date":"2019-08-24","tags":["foobar"],"excerpt":"This is the first post"}}],"tag":"foobar"}}}
