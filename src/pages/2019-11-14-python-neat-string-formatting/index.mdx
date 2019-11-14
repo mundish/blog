@@ -1,0 +1,85 @@
+---
+path: '/python-neat-string-formatting'
+date: '2019-11-14'
+title: 'Python: Neat string formatting'
+tags: ['python']
+excerpt: "In my efforts to learn python, I've been spending some time on Codewars doing katas.
+Apart from being a good place to come across problems to solve,
+Codewars also lists top voted solutions for katas which are a great source for learning some new tricks."
+---
+
+In my efforts to learn python, I've been spending some time on [Codewars](https://www.codewars.com) doing katas.
+Apart from being a good place to come across problems to solve,
+Codewars also lists top voted solutions for katas which are a great source for learning some new tricks.
+
+<br/>
+One such trick I've picked up is the following:
+
+```python
+def create_phone_number(n):
+  return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+
+create_phone_number([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+```
+
+<br />
+
+This function will take an array `n` consisting of 10 integers (0-9) and return them in the format of `"(012) 345-6789"`.
+
+<br />
+
+So how does this work?
+
+Well, there's two (fairly basic) main concepts here: the [`format`-method](https://docs.python.org/3/library/stdtypes.html#str.format)
+and the [`*`-operator](https://docs.python.org/3.4/tutorial/controlflow.html#unpacking-argument-lists).
+
+<br />
+
+The `format`-method interpolates each of the arguments passed into the corresponding _replacement field_ (`{}`) in the target string.
+
+<br />
+
+In the function `create_phone_number` above, `n` is an array, which with the help of `*` is "unpacked",
+or split into a series of single arguments passed into the function.
+
+If you're familiar with [spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+in JavaScript this should be familiar.
+
+<br />
+
+This is cool and all, but passing that phone number as an array feels cumbersome, don't you think?
+
+Not a problem, since we can unpack strings too:
+
+<br />
+
+```python
+def format_phone_number(n):
+  return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+
+format_phone_number("0123456789")
+```
+
+<br />
+
+That's even nicer!
+
+<br />
+
+To wrap up, here's a couple of examples for other cases where this could be a suitable solution:
+
+<br />
+
+```python
+def format_date(date):
+    # YYYY-MM-DD
+    return "{}{}{}{}-{}{}-{}{}".format(*date)
+
+def format_swedish_personal_id_number(n): # YYYYMMDD-XXXX
+    return "{}{}{}{}{}{}{}{}-{}{}{}{}".format(\*n)
+
+```
+
+```
+
+```
