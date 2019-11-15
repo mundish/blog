@@ -24,7 +24,7 @@ create_phone_number([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 <br />
 
-This function will take an array `n` consisting of 10 integers (0-9) and return them in the format of `"(012) 345-6789"`.
+This function will take an array `n` consisting of 10 integers (0-9) and return them in the format _(012) 345-6789_.
 
 <br />
 
@@ -49,7 +49,7 @@ in JavaScript this should be familiar.
 
 This is cool and all, but passing that phone number as an array feels cumbersome, don't you think?
 
-Not a problem, since we can unpack strings too:
+Not a problem, since (like with _spread_ ) we can unpack strings too:
 
 <br />
 
@@ -62,7 +62,7 @@ format_phone_number("0123456789")
 
 <br />
 
-That's even nicer!
+That's nicer!
 
 <br />
 
@@ -76,10 +76,6 @@ def format_date(date):
     return "{}{}{}{}-{}{}-{}{}".format(*date)
 
 def format_swedish_personal_id_number(n): # YYYYMMDD-XXXX
-    return "{}{}{}{}{}{}{}{}-{}{}{}{}".format(\*n)
-
-```
-
-```
+    return "{}{}{}{}{}{}{}{}-{}{}{}{}".format(*n)
 
 ```
