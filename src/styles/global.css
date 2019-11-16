@@ -1,5 +1,9 @@
 @tailwind base;
 
+li {
+  @apply list-disc list-inside;
+}
+
 pre {
   @apply px-2 bg-red-100;
 }

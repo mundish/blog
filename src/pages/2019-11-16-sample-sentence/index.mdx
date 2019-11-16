@@ -1,15 +1,16 @@
 ---
 path: '/sample-sentence'
-date: '2019-10-19'
+date: '2019-11-16'
 title: 'Sample sentence'
 tags: ['japanese']
-excerpt: "You're only mad because they stole the izakaya's tame monkey"
+excerpt: "The idea here is to figure out the translation of a random sentence I've come up with:
+You're only mad because they stole the izakaya's tame monkey."
 ---
 
 import Furigana from '../../components/Furigana';
 
 The idea here is to figure out the translation of a random sentence I've come up with:
-_You're only angry because they stole the izakaya's tame monkey._
+_You're only mad because they stole the izakaya's tame monkey._
 
 <br/>
 My initial effort to gather the pieces needed yielded this:
@@ -22,7 +23,7 @@ My initial effort to gather the pieces needed yielded this:
 <br/>
 <Furigana characters={[{kanji:'温', kana:'おん'},{kanji:'順', kana:'じゅん'}]}/>(な) - Tame (adj.)
 <br/>
-Aのために... - Because of A ...
+A(の)ために... - Because of A ...
 
 <br/>
 <br/>
@@ -35,19 +36,20 @@ Which would result in something like:
     <Furigana characters={[{kanji:'温', kana: 'おん'},{kanji:'順',kana:'じゅん'}]} />
     なサルを
     <Furigana characters={[{kanji:'盗', kana:'ぬす'}]} />
-    んだのために
+    んだために
     <Furigana characters={[{kanji:'怒',kana:'おこ'}]}/>
-    ました。
+    られました。
 </div>
 <br/>
 
 _However_, reaching out to a friend (native speaker), I got a few pointers:
 
-- Tame has a lot of meanings, but in this case,”飼いならす” or “おとなしい” sounds better.
+- Tame has a lot of possible translations, but in this case, ”飼いならす” or “おとなしい” sounds better.
+- The に particle after ため can be omitted, making it a bit more conversational (like with a lot of particle uses).
 
 <br />
 
-### Result:
+So what I ended up with was the following:
 
 <div className={'text-lg text-center'}>
   <Furigana
@@ -64,6 +66,21 @@ _However_, reaching out to a friend (native speaker), I got a few pointers:
   られました。
 </div>
 
-// のために // with or without particles??
+<br />
 
-### Take aways:
+## **Take aways:**
+
+Apart from the new vocabulary itself, what I learned was the concept of ため:
+
+ため have other possible uses, but in this case the concept was that of a cause having an effect.
+
+Both cause and effect can be either a noun or an action (verb).
+
+Given the structure `cause` (の)ため(に/の) `effect`, the following rules applies:
+
+<br />
+
+- _Noun_ のための _noun_
+- _Noun_ のため(に) _verb_
+- _Verb_ ための _noun_
+- _Verb_ ため(に) _verb_
