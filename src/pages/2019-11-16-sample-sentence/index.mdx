@@ -15,13 +15,13 @@ _You're only mad because they stole the izakaya's tame monkey._
 <br/>
 My initial effort to gather the pieces needed yielded this:
 <br/>
-<Furigana characters={[{kanji:'怒',kana:'おこ'}]}　/>る - To get angry/mad
+<Furigana readings={['おこ']}　>怒</Furigana> る - To get angry/mad
 <br/>
-<Furigana characters={[{kanji:'居',kana:'い'},{kanji:'酒',kana:'ざか'},{kanji:'屋',kana:'や'}]} /> - Izakaya
+<Furigana readings={['い','ざか','や']} >居酒屋</Furigana> - Izakaya
 <br/>
-<Furigana characters={[{kanji:'盗',kana:'ぬす'}]} />む - To steal
+<Furigana readings={['ぬす']} >盗</Furigana> む - To steal
 <br/>
-<Furigana characters={[{kanji:'温', kana:'おん'},{kanji:'順', kana:'じゅん'}]}/>(な) - Tame (adj.)
+<Furigana readings={['おん','じゅん']}>温順</Furigana> (な) - Tame (adj.)
 <br/>
 A(の)ために... - Because of A ...
 
@@ -31,13 +31,13 @@ Which would result in something like:
 <br/>
 
 <div className={'text-lg text-center'}>
-    <Furigana characters={[{kanji:'居', kana:'い'},{kanji:'酒',kana:'ざか'},{kanji:'屋',kana:'や'}]} />
+    <Furigana readings={['い','ざか','や']} >居酒屋</Furigana>
     の
-    <Furigana characters={[{kanji:'温', kana: 'おん'},{kanji:'順',kana:'じゅん'}]} />
+    <Furigana readings={['おん','じゅん']} >温順</Furigana>
     なサルを
-    <Furigana characters={[{kanji:'盗', kana:'ぬす'}]} />
+    <Furigana readings={['ぬす']} >盗</Furigana>
     んだために
-    <Furigana characters={[{kanji:'怒',kana:'おこ'}]}/>
+    <Furigana readings={['おこ']}>怒</Furigana>
     られました。
 </div>
 <br/>
@@ -52,17 +52,11 @@ _However_, reaching out to a friend (native speaker), I got a few pointers:
 So what I ended up with was the following:
 
 <div className={'text-lg text-center'}>
-  <Furigana
-    characters={[
-      { kanji: '居', kana: 'い' },
-      { kanji: '酒', kana: 'ざか' },
-      { kanji: '屋', kana: 'や' },
-    ]}
-  />
+  <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana>
   のおとなしいサルを
-  <Furigana characters={[{ kanji: '盗', kana: 'ぬす' }]} />
+  <Furigana readings={['ぬす']}>盗</Furigana>
   んだため、
-  <Furigana characters={[{ kanji: '怒', kana: 'おこ' }]} />
+  <Furigana readings={['おこ']}>怒</Furigana>
   られました。
 </div>
 
