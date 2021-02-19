@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import Preview from '../components/Preview';
 
-export default ({ data }) => {
+const Page = ({ data }) => {
   const { edges } = data.allMdx;
 
   return (
@@ -46,3 +46,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Page;
