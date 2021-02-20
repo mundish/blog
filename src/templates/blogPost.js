@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
 import StartLink from '../components/StartLink';
 import CodeBlock from '../components/CodeBlock';
+import Headings from '../components/Heading';
 
 const Template = ({ data: { mdx }, pageContext }) => {
   const {
@@ -22,9 +23,17 @@ const Template = ({ data: { mdx }, pageContext }) => {
       <div className={'mb-4 font-serif'}>
         <MDXProvider
           components={{
-            a: props => (
-              // eslint-disable-next-line
-              <a className={'underline hover:no-underline'} {...props} />
+            h1: Headings.H1,
+            h2: Headings.H2,
+            h3: Headings.H3,
+            h4: Headings.H4,
+            h5: Headings.H5,
+            h6: Headings.H6,
+            p: props => <p {...props} className={'my-4'} />,
+            a: ({ children, ...props }) => (
+              <a className={'underline hover:no-underline'} {...props}>
+                {children}
+              </a>
             ),
             pre: ({ children }) => (
               <div className={'overflow-x-auto'}>{children}</div>

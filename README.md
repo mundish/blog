@@ -16,8 +16,8 @@ Blog project heavily influenced by the [egghead.io](https://egghead.io/) course 
 
 ## Todo
 
-- Better MDX formatting
-- Refactor post handling to avoid uneccessary duplication of path and date
+- Refactor post handling to avoid uneccessary duplication of path and date.
+- Add `Link` component to handle internal/external links.
 
 ## Acknowledgements
 
