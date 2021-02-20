@@ -36,6 +36,9 @@ const Template = ({ data: { mdx }, pageContext }) => {
               <div className={'overflow-x-auto'}>{children}</div>
             ),
             code: CodeBlock,
+            li: ({ children }) => (
+              <li className={'list-disc list-inside'}>{children}</li>
+            ),
           }}
         >
           <MDXRenderer>{body}</MDXRenderer>
