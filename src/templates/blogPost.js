@@ -30,9 +30,10 @@ const Template = ({ data: { mdx }, pageContext }) => {
             h5: Headings.H5,
             h6: Headings.H6,
             p: props => <p {...props} className={'my-4'} />,
-            a: props => (
-              // eslint-disable-next-line
-              <a className={'underline hover:no-underline'} {...props} />
+            a: ({ children, ...props }) => (
+              <a className={'underline hover:no-underline'} {...props}>
+                {children}
+              </a>
             ),
             pre: ({ children }) => (
               <div className={'overflow-x-auto'}>{children}</div>
