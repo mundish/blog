@@ -12,46 +12,47 @@ import Furigana from '../../components/Furigana';
 The idea here is to figure out the translation of a random sentence I've come up with:
 _You're only mad because they stole the izakaya's tame monkey._
 
-<br/>
 My initial effort to gather the pieces needed yielded this:
-<br/>
-<Furigana readings={['おこ']}　>怒</Furigana> る - To get angry/mad
-<br/>
-<Furigana readings={['い','ざか','や']} >居酒屋</Furigana> - Izakaya
-<br/>
-<Furigana readings={['ぬす']} >盗</Furigana> む - To steal
-<br/>
-<Furigana readings={['おん','じゅん']}>温順</Furigana> (な) - Tame (adj.)
-<br/>
-A(の)ために... - Because of A ...
 
-<br/>
-<br/>
+<ul>
+<li>
+  <Furigana readings={['おこ']}　>怒</Furigana> る - To get angry/mad
+</li>
+
+<li>
+  <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana> - Izakaya
+</li>
+
+<li>
+  <Furigana readings={['ぬす']}>盗</Furigana> む - To steal
+</li>
+
+<li>
+  <Furigana readings={['おん','じゅん']}>温順</Furigana> (な) - Tame (adj.)
+</li>
+<li>A(の)ために... - Because of A ...</li>
+</ul>
+
 Which would result in something like:
-<br/>
 
-<div className={'text-lg text-center'}>
-    <Furigana readings={['い','ざか','や']} >居酒屋</Furigana>
-    の
-    <Furigana readings={['おん','じゅん']} >温順</Furigana>
-    なサルを
-    <Furigana readings={['ぬす']} >盗</Furigana>
-    んだために
-    <Furigana readings={['おこ']}>怒</Furigana>
-    られました。
+<div className={'my-4 text-lg text-center'}>
+  <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana>の
+  <Furigana readings={['おん', 'じゅん']}>温順</Furigana>
+  なサルを
+  <Furigana readings={['ぬす']}>盗</Furigana>
+  んだために
+  <Furigana readings={['おこ']}>怒</Furigana>
+  られました。
 </div>
-<br/>
 
 _However_, reaching out to a friend (native speaker), I got a few pointers:
 
 - Tame has a lot of possible translations, but in this case, ”飼いならす” or “おとなしい” sounds better.
 - The に particle after ため can be omitted, making it a bit more conversational (like with a lot of particle uses).
 
-<br />
-
 So what I ended up with was the following:
 
-<div className={'text-lg text-center'}>
+<div className={'my-4 text-lg text-center'}>
   <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana>
   のおとなしいサルを
   <Furigana readings={['ぬす']}>盗</Furigana>
@@ -60,9 +61,7 @@ So what I ended up with was the following:
   られました。
 </div>
 
-<br />
-
-## **Take aways:**
+## Take aways:
 
 Apart from the new vocabulary itself, what I learned was the concept of ため:
 
@@ -71,8 +70,6 @@ Apart from the new vocabulary itself, what I learned was the concept of ため:
 Both cause and effect can be either a noun or an action (verb).
 
 Given the structure `cause` (の)ため(に/の) `effect`, the following rules applies:
-
-<br />
 
 - _Noun_ のための _noun_
 - _Noun_ のため(に) _verb_
