@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
 import StartLink from '../components/StartLink';
+import CodeBlock from '../components/CodeBlock';
 
 const Template = ({ data: { mdx }, pageContext }) => {
   const {
@@ -25,6 +26,10 @@ const Template = ({ data: { mdx }, pageContext }) => {
               // eslint-disable-next-line
               <a className={'underline hover:no-underline'} {...props} />
             ),
+            pre: ({ children }) => (
+              <div className={'overflow-x-auto'}>{children}</div>
+            ),
+            code: CodeBlock,
           }}
         >
           <MDXRenderer>{body}</MDXRenderer>

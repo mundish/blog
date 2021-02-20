@@ -4,14 +4,6 @@ li {
   @apply list-disc list-inside;
 }
 
-pre {
-  @apply px-2 bg-red-100;
-}
-
-pre code {
-  @apply inline-block max-w-full py-2 overflow-x-scroll;
-}
-
 @tailwind components;
 
 @tailwind utilities;

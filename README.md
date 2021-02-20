@@ -17,7 +17,6 @@ Blog project heavily influenced by the [egghead.io](https://egghead.io/) course 
 ## Todo
 
 - Better MDX formatting
-- Syntax highlighting for MDX code blocks
 - Refactor post handling to avoid uneccessary duplication of path and date
 
 ## Acknowledgements
