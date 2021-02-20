@@ -1,5 +1,4 @@
 module.exports = {
-  purge: ['.src/**/*.js', '.src/**/*.mdx'],
   theme: {
     cursor: {
       auto: 'auto',
