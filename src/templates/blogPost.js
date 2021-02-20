@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import StartLink from '../components/StartLink';
 import CodeBlock from '../components/CodeBlock';
 import Headings from '../components/Heading';
+import A from '../components/A';
 
 const Template = ({ data: { mdx }, pageContext }) => {
   const {
@@ -30,11 +31,7 @@ const Template = ({ data: { mdx }, pageContext }) => {
             h5: Headings.H5,
             h6: Headings.H6,
             p: props => <p {...props} className={'my-4'} />,
-            a: ({ children, ...props }) => (
-              <a className={'underline hover:no-underline'} {...props}>
-                {children}
-              </a>
-            ),
+            a: A,
             pre: ({ children }) => (
               <div className={'overflow-x-auto'}>{children}</div>
             ),
