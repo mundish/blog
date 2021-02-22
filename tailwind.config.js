@@ -13,4 +13,5 @@ module.exports = {
   variants: {
     visibility: ['group-hover'],
   },
+  purge: false,
 };

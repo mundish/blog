@@ -5,6 +5,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+      },
+    },
     'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
     {
