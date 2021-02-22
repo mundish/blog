@@ -2,6 +2,8 @@
 
 Blog project heavily influenced by the [egghead.io](https://egghead.io/) course _Build a Blog with React and Markdown using Gatsby_ by [Taylor Bell](https://github.com/tayiorbeii/).
 
+Live [here](https://mundi.sh/).
+
 ## Stack
 
 🙀 [GitHub Pages](https://pages.github.com/) (for publishing).
