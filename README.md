@@ -16,7 +16,7 @@ Blog project heavily influenced by the [egghead.io](https://egghead.io/) course 
 
 ## Todo
 
-- Refactor post handling to avoid uneccessary duplication of path and date.
+- Dark Mode
 
 ## Acknowledgements
 
