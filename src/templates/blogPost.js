@@ -7,6 +7,7 @@ import StartLink from '../components/StartLink';
 import CodeBlock from '../components/CodeBlock';
 import Headings from '../components/Heading';
 import A from '../components/A';
+import BlockQuote from '../components/BlockQuote';
 
 const Template = ({ data: { mdx }, pageContext }) => {
   const {
@@ -39,6 +40,7 @@ const Template = ({ data: { mdx }, pageContext }) => {
             li: ({ children }) => (
               <li className={'list-disc list-inside'}>{children}</li>
             ),
+            blockquote: BlockQuote,
           }}
         >
           <MDXRenderer>{body}</MDXRenderer>

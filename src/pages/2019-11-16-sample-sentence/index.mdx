@@ -7,6 +7,7 @@ excerpt: "The idea here is to figure out the translation of a random sentence I'
 You're only mad because they stole the izakaya's tame monkey."
 ---
 
+import BlockQuote from '../../components/BlockQuote';
 import Furigana from '../../components/Furigana';
 
 The idea here is to figure out the translation of a random sentence I've come up with:
@@ -14,28 +15,15 @@ _You're only mad because they stole the izakaya's tame monkey._
 
 My initial effort to gather the pieces needed yielded this:
 
-<ul>
-<li>
-  <Furigana readings={['おこ']}　>怒</Furigana> る - To get angry/mad
-</li>
-
-<li>
-  <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana> - Izakaya
-</li>
-
-<li>
-  <Furigana readings={['ぬす']}>盗</Furigana> む - To steal
-</li>
-
-<li>
-  <Furigana readings={['おん','じゅん']}>温順</Furigana> (な) - Tame (adj.)
-</li>
-<li>A(の)ために... - Because of A ...</li>
-</ul>
+- <Furigana readings={['おこ']}　>怒</Furigana> る - To get angry/mad
+- <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana> - Izakaya
+- <Furigana readings={['ぬす']}>盗</Furigana> む - To steal
+- <Furigana readings={['おん','じゅん']}>温順</Furigana> (な) - Tame (adj.)
+- A(の)ために... - Because of A ...
 
 Which would result in something like:
 
-<div className={'my-4 text-lg text-center'}>
+<BlockQuote>
   <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana>の
   <Furigana readings={['おん', 'じゅん']}>温順</Furigana>
   なサルを
@@ -43,7 +31,7 @@ Which would result in something like:
   んだために
   <Furigana readings={['おこ']}>怒</Furigana>
   られました。
-</div>
+</BlockQuote>
 
 _However_, reaching out to a friend (native speaker), I got a few pointers:
 
@@ -52,14 +40,14 @@ _However_, reaching out to a friend (native speaker), I got a few pointers:
 
 So what I ended up with was the following:
 
-<div className={'my-4 text-lg text-center'}>
+<BlockQuote>
   <Furigana readings={['い', 'ざか', 'や']}>居酒屋</Furigana>
   のおとなしいサルを
   <Furigana readings={['ぬす']}>盗</Furigana>
   んだため、
   <Furigana readings={['おこ']}>怒</Furigana>
   られました。
-</div>
+</BlockQuote>
 
 ## Take aways:
 
