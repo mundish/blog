@@ -19,6 +19,9 @@ Live [here](https://mundi.sh/).
 ## Todo
 
 - Dark Mode
+- Try out [GoatCounter](https://www.goatcounter.com/)
+- Optimization
+- GitHub Action (build/publish on merge/push `master`).
 
 ## Acknowledgements
 
