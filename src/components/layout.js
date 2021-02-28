@@ -4,7 +4,12 @@ import Header from './Header';
 
 export default ({ children }) => (
   <>
-    <Helmet title={'mundi.sh_'} />
+    <Helmet
+      title={'mundi.sh_'}
+      htmlAttributes={{
+        lang: 'en',
+      }}
+    />
     <div className="m-0 max-w-2xl mx-auto p-5 min-h-screen flex flex-col">
       <Header />
       <div className={'flex-grow'}>{children}</div>

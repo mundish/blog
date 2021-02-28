@@ -1,8 +1,10 @@
 import React from 'react';
 
-const BlockQuote = ({ children }) => {
+const BlockQuote = ({ children, lang = 'en' }) => {
   return (
-    <blockquote className={'my-4 text-lg text-center'}>{children}</blockquote>
+    <blockquote lang={lang} className={'my-4 text-lg text-center'}>
+      {children}
+    </blockquote>
   );
 };
 
